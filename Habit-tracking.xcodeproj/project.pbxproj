@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B94393AA2437C5A2005CEC76 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94393A92437C5A2005CEC76 /* DetailView.swift */; };
 		B961B2582437002E000E5C01 /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B961B2572437002E000E5C01 /* AddView.swift */; };
 		B9DC51E82436152F0098E767 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DC51E72436152F0098E767 /* AppDelegate.swift */; };
 		B9DC51EA2436152F0098E767 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DC51E92436152F0098E767 /* SceneDelegate.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B94393A92437C5A2005CEC76 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		B961B2572437002E000E5C01 /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
 		B9DC51E42436152F0098E767 /* Habit-tracking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Habit-tracking.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9DC51E72436152F0098E767 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 				B9DC51FB243630AC0098E767 /* SingleActivity.swift */,
 				B9DC51FD2436433B0098E767 /* Activities.swift */,
 				B9DC51EB2436152F0098E767 /* ContentView.swift */,
+				B94393A92437C5A2005CEC76 /* DetailView.swift */,
 				B961B2572437002E000E5C01 /* AddView.swift */,
 				B9DC51ED243615330098E767 /* Assets.xcassets */,
 				B9DC51F2243615330098E767 /* LaunchScreen.storyboard */,
@@ -158,6 +161,7 @@
 				B9DC51E82436152F0098E767 /* AppDelegate.swift in Sources */,
 				B9DC51EA2436152F0098E767 /* SceneDelegate.swift in Sources */,
 				B961B2582437002E000E5C01 /* AddView.swift in Sources */,
+				B94393AA2437C5A2005CEC76 /* DetailView.swift in Sources */,
 				B9DC51FC243630AC0098E767 /* SingleActivity.swift in Sources */,
 				B9DC51FE2436433B0098E767 /* Activities.swift in Sources */,
 				B9DC51EC2436152F0098E767 /* ContentView.swift in Sources */,

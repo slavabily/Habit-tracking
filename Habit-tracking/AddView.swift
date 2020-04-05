@@ -15,6 +15,7 @@ struct AddView: View {
     
     @State private var title = ""
     @State private var description = ""
+    @State private var showingBadValueAlert = false
     
     var body: some View {
         NavigationView {
@@ -25,11 +26,18 @@ struct AddView: View {
             }
             .navigationBarTitle("Add new activity", displayMode: .inline)
             .navigationBarItems(trailing: Button("Save") {
-
-                let item = SingleActivity(title: self.title, description: self.description)
-                self.activities.items.append(item)
-                self.presentationMode.wrappedValue.dismiss()
+                if self.title != "" && self.description != "" {
+                    let item = SingleActivity(title: self.title, description: self.description, completionTimes: nil)
+                    self.activities.items.append(item)
+                    self.presentationMode.wrappedValue.dismiss()
+                } else {
+                    // alert on problem with input
+                    self.showingBadValueAlert.toggle()
+                }
             })
+        }
+        .alert(isPresented: $showingBadValueAlert) { () -> Alert in
+            Alert(title: Text("Wrong input!"), message: Text("Entered value is empty. Please, enter some activity title or description."), dismissButton: .default(Text("Ok")))
         }
          
     }

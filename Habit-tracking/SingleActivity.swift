@@ -12,4 +12,5 @@ struct SingleActivity: Codable, Identifiable {
     let id = UUID()
     let title: String
     let description: String
+    var completionTimes: Int?
 }

@@ -17,14 +17,15 @@ struct ContentView: View {
         NavigationView {
             List {
                 ForEach(activities.items) { (item) in
-                    VStack(alignment: .leading) {
-                        Text(item.title)
-                            .font(.headline)
-                        Text(item.description)
+                    NavigationLink(destination: DetailView(activities: self.activities, id: item.id, title: item.title, description: item.description)) {
+                        VStack(alignment: .leading) {
+                            Text(item.title)
+                                .font(.headline)
+                            Text(item.description)
+                        }
                     }
                 }
-                
-                
+                .onDelete(perform: removeItems(at:))
             }
             .navigationBarTitle("Habit-Tracking")
             .navigationBarItems(leading: EditButton(), trailing: Button(action: {
@@ -36,7 +37,10 @@ struct ContentView: View {
         .sheet(isPresented: $showingAddActivities) { () -> AddView in
             AddView(activities: self.activities)
         }
-        
+    }
+    
+    func removeItems(at offsets: IndexSet) {
+        activities.items.remove(atOffsets: offsets)
     }
 }
 
