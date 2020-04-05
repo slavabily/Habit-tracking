@@ -17,7 +17,7 @@ struct ContentView: View {
         NavigationView {
             List {
                 ForEach(activities.items) { (item) in
-                    NavigationLink(destination: DetailView(activities: self.activities, id: item.id, title: item.title, description: item.description)) {
+                    NavigationLink(destination: DetailView(activities: self.activities, title: item.title, description: item.description, completionTimes: item.completionTimes ?? 0)) {
                         VStack(alignment: .leading) {
                             Text(item.title)
                                 .font(.headline)

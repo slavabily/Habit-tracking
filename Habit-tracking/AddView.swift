@@ -27,7 +27,7 @@ struct AddView: View {
             .navigationBarTitle("Add new activity", displayMode: .inline)
             .navigationBarItems(trailing: Button("Save") {
                 if self.title != "" && self.description != "" {
-                    let item = SingleActivity(title: self.title, description: self.description, completionTimes: nil)
+                    let item = SingleActivity(title: self.title, description: self.description)
                     self.activities.items.append(item)
                     self.presentationMode.wrappedValue.dismiss()
                 } else {
